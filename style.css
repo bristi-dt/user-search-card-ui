@@ -1,0 +1,101 @@
+body {
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    margin: 20px 0 0 0;
+}
+
+#search {
+    margin: 20px;
+    height: 10px;
+    width: 200px;
+    padding: 20px;
+    border-radius: 8px;
+    background: #111;
+    color: #888;
+}
+
+.cards {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+
+}
+
+.card:hover {
+    transform: scale(1.10);
+    box-shadow: 2px 2px 4px violet, -2px -2px 4px purple;
+}
+
+.card:active {
+    transform: scale(0.85);
+}
+
+.card {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 28px;
+    box-shadow: 0 20px 60px rgb(0, 0, 0., 0.4);
+}
+
+.bg-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.blurred-layer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-size: cover;
+    background-position: bottom;
+    filter: blur(2px);
+    z-index: 1;
+    mask-image: linear-gradient(to top, rgb(0, 0, 0, 1), rgb(0, 0, 0, 0));
+    mask-size: 100% 100%;
+    mask-repeat: no-repeat;
+
+    -webkit-mmask-image: linear-gradient(to top,
+            rgb(0, 0, 0, 1),
+            rgb(0, 0, 0, 0));
+    -webkit-mask-size: 100% 100%;
+    -webkit-mask-repeat: no-repeat;
+
+}
+
+.content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 2;
+}
+
+.content h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: #fff;
+    text-shadow: 2px 2px 4px black;
+}
+
+.content p {
+    font-size: 14px;
+    color: red;
+    text-shadow: 2px 2px 4px black;
+    line-height: 1.4;
+
+}
